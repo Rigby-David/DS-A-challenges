@@ -28,8 +28,15 @@ function at(arr, index) {
   }
 }
 
-// function anagrams(wordOne, wordTwo) {
-//   return wordOne.sort();
-// }
+function anagrams(wordOne, wordTwo) {
+  const one = wordOne.split('').sort().join('');
+  const two = wordTwo.split('').sort().join('');
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
+  if (one === two) {
+    return 'true';
+  } else if (one != two) {
+    return 'false';
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at, anagrams };
