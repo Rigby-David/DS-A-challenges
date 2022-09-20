@@ -18,5 +18,8 @@ describe('primitive code challenges', () => {
       expect(array1).toBe('b');
       expect(array2).toBe('d');
     });
+    it('should take two words and return true if anagrams, false otherwise', () => {
+      expect(anagrams(['superintended', 'unpresedestined'])).toBe('true');
+    });
   });
 });

@@ -21,9 +21,15 @@ function oddishOrEvenish(number) {
 }
 
 function at(arr, index) {
-  if (arr.length === 0) {
-    return at;
+  if (index >= 0) {
+    return arr[index];
+  } else {
+    return arr[arr.length + index];
   }
 }
+
+// function anagrams(wordOne, wordTwo) {
+//   return wordOne.sort();
+// }
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
