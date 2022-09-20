@@ -42,7 +42,7 @@ function anagrams(wordOne, wordTwo) {
 function fizzBuzz(number) {
   const arr = [];
   for (let i = 1; i <= number; i++) {
-    if (i % 15 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       arr.push('FizzBuzz');
     } else if (i % 3 === 0) {
       arr.push('Fizz');
@@ -55,7 +55,21 @@ function fizzBuzz(number) {
   return arr;
 }
 
-function multiplesOfN(n) {}
+function multiplesOfN(n) {
+  const arr = [];
+  //increment
+  for (let i = 1; n <= 50; i++) {
+    //variable that multiplies the input
+    const multiple = i * n;
+    //jump out of loop if exceeds 50
+    if (i * n > 50) {
+      break;
+    }
+    //
+    arr.push(multiple);
+  }
+  return arr;
+}
 
 module.exports = {
   reverseSentence,
