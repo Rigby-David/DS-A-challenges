@@ -28,6 +28,9 @@ describe('Queue', () => {
     que.dequeue();
     que.dequeue();
     console.log('que.list', que.list);
-    expect(que.list).toEqual(null);
+    expect(que.hasNext()).toBe(false);
+    que.enqueue('fox');
+    que.enqueue('goose');
+    expect(que.hasNext()).toBe(true);
   });
 });

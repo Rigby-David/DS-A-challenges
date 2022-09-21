@@ -15,7 +15,13 @@ class Queue {
     return this.#list.shift();
   }
 
-  hasNext() {}
+  hasNext() {
+    if (this.#list.length >= 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   get list() {
     return this.#list;
