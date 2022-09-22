@@ -77,6 +77,20 @@ function addPunctuation(punctuation) {
   };
 }
 
+function rootDigit(n) {
+  const string = n.toString();
+  let sum = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    sum += parseInt(string[i]);
+  }
+
+  if (sum > 9) {
+    return rootDigit(sum).toString();
+  }
+  return sum.toString();
+}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -86,4 +100,5 @@ module.exports = {
   fizzBuzz,
   multiplesOfN,
   addPunctuation,
+  rootDigit,
 };

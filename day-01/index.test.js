@@ -69,5 +69,6 @@ describe('primitive code challenges', () => {
         'Pokemon, catch em all?!?'
       );
     });
+    it('should return return one number that is the sum of all numbers. if the sum is more than one number, return the sum of those numbers and repeat until receive just one number', () => {});
   });
 });
