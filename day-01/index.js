@@ -71,6 +71,12 @@ function multiplesOfN(n) {
   return arr;
 }
 
+function addPunctuation(punctuation) {
+  return function string(string) {
+    return string + punctuation;
+  };
+}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -79,4 +85,5 @@ module.exports = {
   anagrams,
   fizzBuzz,
   multiplesOfN,
+  addPunctuation,
 };
