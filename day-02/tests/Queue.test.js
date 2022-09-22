@@ -12,8 +12,6 @@ describe('Queue', () => {
   it('dequeue should return an item and remove an item from the front of the stack(line)', () => {
     const que = new Queue();
 
-    console.log('que', que);
-
     que.enqueue('fox');
     que.enqueue('goose');
     que.enqueue('lizard');
@@ -27,7 +25,6 @@ describe('Queue', () => {
     que.enqueue('goose');
     que.dequeue();
     que.dequeue();
-    console.log('que.list', que.list);
     expect(que.hasNext()).toBe(false);
     que.enqueue('fox');
     que.enqueue('goose');
