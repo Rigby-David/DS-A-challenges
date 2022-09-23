@@ -7,6 +7,7 @@ const {
   fizzBuzz,
   multiplesOfN,
   addPunctuation,
+  rootDigit,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -68,6 +69,10 @@ describe('primitive code challenges', () => {
       expect(unSure('Pokemon, catch em all')).toEqual(
         'Pokemon, catch em all?!?'
       );
+    });
+    it('takes a number, returns the sum off all input numbers and repeats process if the sum is more than one number', () => {
+      console.log('rootDigit(123', rootDigit(123));
+      expect(rootDigit(123)).toEqual(6);
     });
   });
 });

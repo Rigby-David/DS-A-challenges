@@ -77,6 +77,14 @@ function addPunctuation(punctuation) {
   };
 }
 
+function rootDigit(n) {
+  const digits = n.toString().split('');
+  const numbers = digits.map((d) => +d);
+  const sum = numbers.reduce((a, b) => a + b);
+  console.log('sum', sum);
+  return String(sum).split('').length === 1 ? sum : rootDigit(sum);
+}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -86,4 +94,5 @@ module.exports = {
   fizzBuzz,
   multiplesOfN,
   addPunctuation,
+  rootDigit,
 };
