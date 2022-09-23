@@ -22,7 +22,17 @@ class Stack {
   }
 }
 
+function reverseArray(arr) {
+  // const arr = [];
+  const stack = new Stack();
+  for (let i = arr.length - 1; i >= 0; i--) {
+    stack.push(arr[i]);
+  }
+  return stack.list;
+  // return reverseArray(arr);
+}
+
 const newStack = new Stack(['fox', 'goose', 'lizard']);
 newStack.push('llama');
 
-module.exports = { Stack };
+module.exports = { Stack, reverseArray };

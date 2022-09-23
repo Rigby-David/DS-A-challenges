@@ -1,4 +1,4 @@
-const { Stack } = require('../Stack');
+const { Stack, reverseArray } = require('../Stack');
 
 describe('Stack', () => {
   it('Push should add a new item to the top of the array', () => {
@@ -20,7 +20,11 @@ describe('Stack', () => {
     stack.push('fox');
     stack.push('llama');
     stack.push('lizard');
-    console.log('stack.peek', stack.peek());
     expect(stack.peek()).toEqual('lizard');
+  });
+  it('should return a copy of the array with its elements returned in reverse order', () => {
+    const stack = new Stack();
+    console.log('stack', stack);
+    expect(reverseArray(['1', '2', '3'])).toEqual(['3', '2', '1']);
   });
 });
