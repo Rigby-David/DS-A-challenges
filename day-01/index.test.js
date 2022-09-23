@@ -73,6 +73,7 @@ describe('primitive code challenges', () => {
     it('takes a number, returns the sum off all input numbers and repeats process if the sum is more than one number', () => {
       console.log('rootDigit(123', rootDigit(123));
       expect(rootDigit(123)).toEqual(6);
+      expect(rootDigit(456)).toEqual(6);
     });
   });
 });
